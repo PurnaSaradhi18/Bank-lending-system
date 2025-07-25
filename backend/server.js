@@ -10,8 +10,8 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-app.use("/api", loansRouter);
-app.use("/api", customersRouter);
+app.use("/api/vi/loan", loansRouter);
+app.use("/api/vi", customersRouter);
 
 app.get("/", (req, res) => {
   res.send("Bank Lending System API is running");
